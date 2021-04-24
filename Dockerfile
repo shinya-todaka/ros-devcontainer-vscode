@@ -149,6 +149,9 @@ RUN jupyter nbextension enable hinterland/hinterland && \
 # enter ROS world
 RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
 
+# install vim 
+RUN apt-get install vim 
+
 EXPOSE 3000 8888
 
 ENTRYPOINT [ "/entrypoint.sh" ]
